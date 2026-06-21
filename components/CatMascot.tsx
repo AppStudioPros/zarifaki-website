@@ -52,11 +52,10 @@ export default function CatMascot() {
 
       {/* Cat image */}
       <div style={{
-        width: "80px",
-        height: "80px",
-        animation: "float 4s ease-in-out infinite",
+        width: "120px",
+        height: "120px",
         transition: "transform 0.2s",
-        transform: hovered ? "scale(1.15)" : "scale(1)",
+        transform: hovered ? "scale(1.08)" : "scale(1)",
         filter: "drop-shadow(0 6px 16px rgba(0,0,0,0.5))",
       }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
