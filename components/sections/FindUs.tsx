@@ -31,7 +31,7 @@ export default function FindUs() {
           >
             {/* Address */}
             <div style={{ display: "flex", gap: "1rem", alignItems: "flex-start" }}>
-              <div style={{ background: "var(--red)", borderRadius: "12px", width: 44, height: 44, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.2rem", flexShrink: 0 }}>📍</div>
+              <div style={{ background: "var(--red)", borderRadius: "12px", width: 8, height: 44, flexShrink: 0 }} />
               <div>
                 <div style={{ fontFamily: "var(--font-head)", fontWeight: 700, fontSize: "0.8rem", color: "var(--gold)", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "0.25rem" }}>
                   {lang === "el" ? "Διεύθυνση" : "Address"}
@@ -44,7 +44,7 @@ export default function FindUs() {
 
             {/* Hours */}
             <div style={{ display: "flex", gap: "1rem", alignItems: "flex-start" }}>
-              <div style={{ background: "var(--red)", borderRadius: "12px", width: 44, height: 44, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.2rem", flexShrink: 0 }}>🕕</div>
+              <div style={{ background: "var(--red)", borderRadius: "12px", width: 8, height: 44, flexShrink: 0 }} />
               <div>
                 <div style={{ fontFamily: "var(--font-head)", fontWeight: 700, fontSize: "0.8rem", color: "var(--gold)", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "0.25rem" }}>
                   {lang === "el" ? "Ώρες Λειτουργίας" : "Opening Hours"}
@@ -57,7 +57,7 @@ export default function FindUs() {
 
             {/* Phone */}
             <div style={{ display: "flex", gap: "1rem", alignItems: "flex-start" }}>
-              <div style={{ background: "var(--red)", borderRadius: "12px", width: 44, height: 44, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.2rem", flexShrink: 0 }}>📞</div>
+              <div style={{ background: "var(--red)", borderRadius: "12px", width: 8, height: 44, flexShrink: 0 }} />
               <div>
                 <div style={{ fontFamily: "var(--font-head)", fontWeight: 700, fontSize: "0.8rem", color: "var(--gold)", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "0.25rem" }}>
                   {lang === "el" ? "Τηλέφωνα" : "Phone"}
@@ -83,7 +83,7 @@ export default function FindUs() {
               onMouseOver={(e) => { e.currentTarget.style.background = "var(--gold)"; e.currentTarget.style.color = "var(--night)"; }}
               onMouseOut={(e)  => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "var(--gold)"; }}
             >
-              🗺️ {t("findus_dir", lang)}
+              {t("findus_dir", lang)}
             </a>
           </motion.div>
 

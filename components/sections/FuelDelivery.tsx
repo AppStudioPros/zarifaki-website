@@ -34,7 +34,7 @@ export default function FuelDelivery() {
             onMouseOver={(e) => e.currentTarget.style.transform = "translateY(-2px)"}
             onMouseOut={(e)  => e.currentTarget.style.transform = "translateY(0)"}
           >
-            📞 {t("delivery_cta", lang)}
+            {t("delivery_cta", lang)}
           </a>
         </motion.div>
 
@@ -61,7 +61,7 @@ export default function FuelDelivery() {
             transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
             style={{ position: "absolute", top: "-1rem", right: "-1rem", background: "var(--red)", borderRadius: "16px", padding: "1rem 1.25rem", boxShadow: "0 8px 32px rgba(196,30,37,0.4)" }}
           >
-            <div style={{ fontFamily: "var(--font-head)", fontWeight: 900, fontSize: "2rem", color: "white", lineHeight: 1 }}>🚚</div>
+            <div style={{ fontFamily: "var(--font-head)", fontWeight: 900, fontSize: "2rem", color: "white", lineHeight: 1 }}>KM</div>
             <div style={{ fontFamily: "var(--font-head)", fontWeight: 700, fontSize: "0.65rem", color: "rgba(255,255,255,0.85)", letterSpacing: "0.1em", textTransform: "uppercase", marginTop: "0.25rem" }}>
               {lang === "el" ? "ΔΙΑΝΟΜΗ" : "DELIVERY"}
             </div>

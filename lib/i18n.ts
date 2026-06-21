@@ -21,15 +21,15 @@ export const translations = {
   },
 
   // Fuel delivery section
-  delivery_tag:  { el: "Υπηρεσία Premium", en: "Premium Service" },
+  delivery_tag:  { el: "Διανομή Καυσίμων", en: "Fuel Delivery" },
   delivery_h2:   { el: "Διανομή Καυσίμων\nΣτην Πόρτα Σας", en: "Fuel Delivery\nTo Your Door" },
-  delivery_p:    { el: "Δεν χρειάζεται να έρθετε εσείς σε εμάς. Αναλαμβάνουμε εμείς να φέρουμε τα καύσιμά σας όπου τα χρειάζεστε — σπίτι, επιχείρηση ή εργοτάξιο.", en: "You don't have to come to us. We deliver fuel directly to your home, business, or worksite — on your schedule." },
+  delivery_p:    { el: "Δεν χρειάζεται να έρθετε εσείς σε εμάς. Φέρνουμε τα καύσιμα στο σπίτι σας, στην επιχείρησή σας ή στο εργοτάξιο — όταν τα χρειάζεστε.", en: "We bring fuel to you — home, business, or worksite. Call us and we'll sort it out." },
   delivery_cta:  { el: "Καλέστε μας τώρα", en: "Call Us Now" },
 
   // Natural gas section
   gas_tag:  { el: "Οικολογική Επιλογή", en: "Eco Choice" },
   gas_h2:   { el: "Φυσικό Αέριο &\nΥγραέριο", en: "Natural Gas &\nAutogas" },
-  gas_p:    { el: "Σύγχρονα καύσιμα για το αύριο. Προσφέρουμε φυσικό αέριο CNG και υγραέριο Coral Gas — πιο καθαρά, πιο οικονομικά, πιο έξυπνα.", en: "Fuels for tomorrow. We offer CNG natural gas and Coral Gas LPG — cleaner, more economical, smarter." },
+  gas_p:    { el: "Φυσικό αέριο CNG και υγραέριο Coral Gas. Φθηνότερα από βενζίνη, λιγότερες εκπομπές — καλή επιλογή για καθημερινά χιλιόμετρα.", en: "CNG natural gas and Coral Gas LPG. Cheaper than petrol, fewer emissions — a solid choice for daily driving." },
 
   // Services
   services_h2: { el: "Τι Προσφέρουμε", en: "What We Offer" },
@@ -40,17 +40,17 @@ export const translations = {
   svc_lpg:     { el: "Υγραέριο Auto Gas", en: "LPG Auto Gas" },
   svc_lpg_d:   { el: "Coral Gas υγραέριο για όχηματα — χαμηλό κόστος, χαμηλές εκπομπές.", en: "Coral Gas LPG for vehicles — low cost, low emissions." },
   svc_wash:    { el: "Πλυντήριο Αυτοκινήτου", en: "Car Wash" },
-  svc_wash_d:  { el: "Χειροκίνητο πλύσιμο με προσωπική φροντίδα για το όχημά σας.", en: "Hand wash service with personal care for your vehicle." },
+  svc_wash_d:  { el: "Χειροκίνητο πλύσιμο — σωστά, όχι βιαστικά.", en: "Hand wash — done right, not rushed." },
   svc_snack:   { el: "Snack Bar & Καφές", en: "Snack Bar & Coffee" },
-  svc_snack_d: { el: "Φρέσκος καφές και σνακ για να συνεχίσετε το ταξίδι σας δυνατά.", en: "Fresh coffee and snacks to fuel your journey." },
+  svc_snack_d: { el: "Φρέσκος καφές και κάτι να φας. Χαλαρώστε λίγο.", en: "Fresh coffee and a bite. Take a break." },
   svc_acc:     { el: "Αξεσουάρ & Λιπαντικά", en: "Accessories & Lubricants" },
-  svc_acc_d:   { el: "Αξεσουάρ αυτοκινήτου, λιπαντικά και ό,τι χρειάζεστε για ασφαλή οδήγηση.", en: "Car accessories, lubricants, and everything for safe driving." },
+  svc_acc_d:   { el: "Λιπαντικά, αξεσουάρ και αέρας ελαστικών.", en: "Lubricants, accessories, and tyre air." },
 
   // About
   about_tag: { el: "Η Ιστορία μας", en: "Our Story" },
   about_h2:  { el: "Τρεις Γενιές\nΟικογενειακής Φροντίδας", en: "Three Generations\nof Family Care" },
-  about_p1:  { el: "Στους Υιούς Ζαριφάκη, είμαστε κάτι παραπάνω από μια απλή στάση στον δρόμο — είμαστε μέρος του ταξιδιού σας. Με υπερηφάνεια εξυπηρετούμε την κοινότητά μας για τρεις γενιές, χτίζοντας μια κληρονομιά ποιότητας, φιλοξενίας και καινοτομίας.", en: "At Zarifaki Sons, we're more than just a stop along the way — we're part of your journey. Proudly serving our community for three generations, we've built a legacy of quality, hospitality, and innovation." },
-  about_p2:  { el: "Από τα χαμογελαστά πρόσωπά μας μέχρι τα σύγχρονα ηλιακά πάνελ μας, δεσμευόμαστε να παρέχουμε εξαιρετική εξυπηρέτηση ενώ συμβάλλουμε σε ένα πιο πράσινο μέλλον.", en: "From our welcoming smiles to our state-of-the-art solar panels, we're committed to providing exceptional service while doing our part for a greener future." },
+  about_p1:  { el: "Το πρατήριο Υιοί Ζαριφάκη λειτουργεί για τρεις γενιές στο ίδιο σημείο της εθνικής Ηρακλείου–Μοιρών. Οικογενειακή επιχείρηση από την αρχή — ο ίδιος κόσμος, η ίδια νοοτροπία.", en: "Zarifaki Sons has been running at the same spot on the Heraklion-Moires road for three generations. A family business from day one — same people, same mindset." },
+  about_p2:  { el: "Τα τελευταία χρόνια προσθέσαμε ηλιακά πάνελ, φυσικό αέριο CNG και υγραέριο Coral Gas. Δεν ακολουθούμε τις εξελίξεις — απλώς κάνουμε ό,τι έχει νόημα.", en: "In recent years we added solar panels, CNG natural gas, and Coral Gas LPG. We don't follow trends — we just do what makes sense." },
   about_stat1_n: { el: "3", en: "3" },
   about_stat1_l: { el: "Γενιές", en: "Generations" },
   about_stat2_n: { el: "7/7", en: "7/7" },

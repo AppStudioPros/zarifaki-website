@@ -12,7 +12,6 @@ const content = {
     cta_directions: "Οδηγίες",
     services: [
       {
-        icon: "⛽",
         title: "Βενζίνη & Πετρέλαιο",
         tag: "AVIN Certified",
         img: "/images/IMG_20241114_135345589_HDR-scaled.jpg",
@@ -20,7 +19,6 @@ const content = {
         details: ["Αμόλυβδη 95", "Diesel", "Πετρέλαιο θέρμανσης", "Πιστοποίηση Bureau Veritas"],
       },
       {
-        icon: "🌿",
         title: "Φυσικό Αέριο CNG",
         tag: "Οικολογική Επιλογή",
         img: "/images/IMG_20241114_135502504-scaled.jpg",
@@ -28,7 +26,6 @@ const content = {
         details: ["CNG Φυσικό Αέριο", "Χαμηλές εκπομπές", "Χαμηλό κόστος", "FISIKON"],
       },
       {
-        icon: "💨",
         title: "Υγραέριο Auto Gas",
         tag: "Coral Gas",
         img: "/images/IMG_20241114_135452680_HDR-scaled.jpg",
@@ -36,32 +33,28 @@ const content = {
         details: ["Coral Gas LPG", "Μειωμένες εκπομπές CO₂", "Χαμηλό κόστος ανά χλμ.", "Διαθέσιμο για όλα τα οχήματα"],
       },
       {
-        icon: "🚚",
         title: "Διανομή Καυσίμων",
         tag: "Premium Υπηρεσία",
         img: "/images/IMG_20241114_140352327_HDR-scaled.jpg",
-        desc: "Φέρνουμε τα καύσιμα εκεί που τα χρειάζεστε. Σπίτι, επιχείρηση, εργοτάξιο — στο τηλέφωνο σας. Εξυπηρέτηση σε όλη την περιοχή Ηρακλείου–Μοιρών.",
+        desc: "Σπίτι, επιχείρηση, εργοτάξιο — τηλεφωνήστε μας και κανονίζουμε. Εξυπηρετούμε την περιοχή Ηρακλείου–Μοιρών.",
         details: ["Διανομή σε σπίτια", "Διανομή σε επιχειρήσεις", "Διανομή σε εργοτάξια", "Περιοχή Ηρακλείου–Μοιρών"],
         cta: true,
       },
       {
-        icon: "🚿",
         title: "Πλυντήριο Αυτοκινήτου",
         tag: "Χειροκίνητο",
         img: "/images/IMG_20241114_140155783_HDR-scaled.jpg",
-        desc: "Χειροκίνητο πλύσιμο με προσωπική φροντίδα. Το αυτοκίνητό σας αντιμετωπίζεται με την προσοχή που του αξίζει.",
+        desc: "Χειροκίνητο πλύσιμο. Σωστά και χωρίς βιασύνη.",
         details: ["Χειροκίνητο πλύσιμο", "Εσωτερικό καθαρισμός", "Γυάλισμα", "Προσωπική φροντίδα"],
       },
       {
-        icon: "☕",
         title: "Snack Bar & Καφές",
         tag: "Φρέσκος Καφές",
         img: "/images/IMG_20241114_140948924_HDR-scaled.jpg",
-        desc: "Φρέσκος καφές και σνακ για να συνεχίσετε το ταξίδι σας δυνατά. Ξεκουραστείτε στον ξύλινο μας αλτάνα.",
+        desc: "Φρέσκος καφές και κάτι να φας. Έχουμε αλτάνα — κάθισε.",
         details: ["Φρέσκος καφές", "Σνακ & γλυκά", "Αλτάνα εξωτερικού χώρου", "Wi-Fi"],
       },
       {
-        icon: "🔧",
         title: "Αξεσουάρ & Λιπαντικά",
         tag: "Αξεσουάρ",
         img: "/images/IMG_20241114_141015518_HDR-scaled.jpg",
@@ -69,7 +62,6 @@ const content = {
         details: ["Λιπαντικά", "Αξεσουάρ αυτοκινήτου", "Αέρας & νερό", "Ανταλλακτικά"],
       },
       {
-        icon: "💧",
         title: "Αέρας & Νερό",
         tag: "Δωρεάν",
         img: "/images/IMG_20241114_135734204-scaled.jpg",
@@ -86,7 +78,6 @@ const content = {
     cta_directions: "Get Directions",
     services: [
       {
-        icon: "⛽",
         title: "Fuel & Diesel",
         tag: "AVIN Certified",
         img: "/images/IMG_20241114_135345589_HDR-scaled.jpg",
@@ -94,7 +85,6 @@ const content = {
         details: ["Unleaded 95", "Diesel", "Heating Oil", "Bureau Veritas Certified"],
       },
       {
-        icon: "🌿",
         title: "Natural Gas CNG",
         tag: "Eco Choice",
         img: "/images/IMG_20241114_135502504-scaled.jpg",
@@ -102,7 +92,6 @@ const content = {
         details: ["CNG Natural Gas", "Low emissions", "Low cost", "FISIKON"],
       },
       {
-        icon: "💨",
         title: "LPG Auto Gas",
         tag: "Coral Gas",
         img: "/images/IMG_20241114_135452680_HDR-scaled.jpg",
@@ -110,32 +99,28 @@ const content = {
         details: ["Coral Gas LPG", "Reduced CO₂", "Low cost per km", "Available for all vehicles"],
       },
       {
-        icon: "🚚",
         title: "Fuel Delivery",
         tag: "Premium Service",
         img: "/images/IMG_20241114_140352327_HDR-scaled.jpg",
-        desc: "We bring fuel to wherever you need it. Home, business, or worksite — just call us. Serving the Heraklion–Moires area.",
+        desc: "Home, business, or worksite — call us and we'll arrange it. We cover the Heraklion-Moires area.",
         details: ["Home delivery", "Business delivery", "Worksite delivery", "Heraklion–Moires area"],
         cta: true,
       },
       {
-        icon: "🚿",
         title: "Car Wash",
         tag: "Hand Wash",
         img: "/images/IMG_20241114_140155783_HDR-scaled.jpg",
-        desc: "Hand wash service with personal care. Your vehicle gets the attention it deserves.",
+        desc: "Hand wash. Done properly, no rush.",
         details: ["Hand wash", "Interior cleaning", "Polish", "Personal care"],
       },
       {
-        icon: "☕",
         title: "Snack Bar & Coffee",
         tag: "Fresh Coffee",
         img: "/images/IMG_20241114_140948924_HDR-scaled.jpg",
-        desc: "Fresh coffee and snacks to fuel your journey. Relax on our outdoor wooden pergola.",
+        desc: "Fresh coffee and a bite. We have an outdoor pergola — sit down for a bit.",
         details: ["Fresh coffee", "Snacks & sweets", "Outdoor pergola", "Wi-Fi"],
       },
       {
-        icon: "🔧",
         title: "Accessories & Lubricants",
         tag: "Accessories",
         img: "/images/IMG_20241114_141015518_HDR-scaled.jpg",
@@ -143,7 +128,6 @@ const content = {
         details: ["Lubricants", "Car accessories", "Air & water", "Parts"],
       },
       {
-        icon: "💧",
         title: "Air & Water",
         tag: "Free",
         img: "/images/IMG_20241114_135734204-scaled.jpg",
@@ -191,8 +175,7 @@ export default function ServicesPageClient() {
               <div style={{ borderRadius: "24px", overflow: "hidden", aspectRatio: "4/3", position: "relative", direction: "ltr" }}>
                 <Image src={svc.img} alt={svc.title} fill style={{ objectFit: "cover" }} />
                 <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(14,26,43,0.5) 0%, transparent 60%)" }} />
-                <div style={{ position: "absolute", top: "1.25rem", left: "1.25rem", background: "var(--red)", borderRadius: "12px", padding: "0.5rem 0.875rem", display: "flex", alignItems: "center", gap: "0.5rem" }}>
-                  <span style={{ fontSize: "1.2rem" }}>{svc.icon}</span>
+                <div style={{ position: "absolute", top: "1.25rem", left: "1.25rem", background: "var(--red)", borderRadius: "8px", padding: "0.35rem 0.75rem" }}>
                   <span style={{ fontFamily: "var(--font-head)", fontWeight: 700, fontSize: "0.65rem", color: "white", letterSpacing: "0.1em", textTransform: "uppercase" }}>{svc.tag}</span>
                 </div>
               </div>
@@ -211,7 +194,7 @@ export default function ServicesPageClient() {
                 </ul>
                 {"cta" in svc && svc.cta && (
                   <a href="tel:+302810792192" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "var(--red)", color: "white", fontFamily: "var(--font-head)", fontWeight: 700, fontSize: "0.9rem", padding: "0.875rem 1.75rem", borderRadius: "999px", textDecoration: "none", boxShadow: "0 4px 20px rgba(196,30,37,0.35)" }}>
-                    📞 {c.cta_delivery}
+                    {c.cta_delivery}
                   </a>
                 )}
               </div>
@@ -231,7 +214,7 @@ export default function ServicesPageClient() {
           </p>
           <a href="https://maps.app.goo.gl/d8v2Dpsu7TzfhzdP8" target="_blank" rel="noopener noreferrer"
             style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "white", color: "var(--red)", fontFamily: "var(--font-head)", fontWeight: 800, fontSize: "0.9rem", padding: "0.875rem 2rem", borderRadius: "999px", textDecoration: "none" }}>
-            🗺️ {c.cta_directions}
+            {c.cta_directions}
           </a>
         </div>
       </section>

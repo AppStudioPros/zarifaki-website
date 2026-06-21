@@ -7,43 +7,43 @@ const content = {
   el: {
     hero_tag: "Η Ιστορία μας",
     hero_h1: "Τρεις Γενιές,\nΜια Οικογένεια",
-    hero_sub: "Στους Υιούς Ζαριφάκη, είμαστε κάτι παραπάνω από μια απλή στάση στον δρόμο — είμαστε μέρος του ταξιδιού σας.",
+    hero_sub: "Από παππού σε πατέρα, από πατέρα σε παιδί — στο ίδιο σημείο, με τον ίδιο τρόπο.",
     section1_h: "Η Ιστορία μας",
     section1_p: [
-      "Με υπερηφάνεια εξυπηρετούμε την κοινότητά μας για τρεις γενιές, χτίζοντας μια κληρονομιά ποιότητας, φιλοξενίας και καινοτομίας. Από τα πρώτα χρόνια λειτουργίας μας μέχρι σήμερα, η αγάπη για τον κόσμο και η αφοσίωση στην εξυπηρέτηση παραμένουν ο πυρήνας κάθε μας πράξης.",
-      "Βρισκόμαστε στο 15ο χιλιόμετρο της εθνικής οδού Ηρακλείου–Μοιρών, σε ένα από τα πιο κεντρικά σημεία της Κρήτης. Κάθε μέρα, χιλιάδες ταξιδιώτες και ντόπιοι επιλέγουν να σταματήσουν εδώ — και εμείς τους υποδεχόμαστε πάντα με ένα χαμόγελο.",
+      "Το πρατήριο Υιοί Ζαριφάκη λειτουργεί για τρεις γενιές στο ίδιο σημείο της εθνικής Ηρακλείου–Μοιρών. Οικογενειακή επιχείρηση από την αρχή — ο ίδιος κόσμος, η ίδια νοοτροπία.",
+      "Βρισκόμαστε στο 15ο χιλιόμετρο, κεντρικό σημείο για τον νομό Ηρακλείου. Καθημερινά σταματάνε εδώ εκατοντάδες οδηγοί — ντόπιοι και ταξιδιώτες.",
     ],
-    section2_h: "Δέσμευσή μας για το Περιβάλλον",
-    section2_p: "Από τα σύγχρονα ηλιακά πάνελ μας μέχρι την παροχή φυσικού αερίου CNG και υγραερίου Coral Gas, δεσμευόμαστε να παρέχουμε εξυπηρέτηση που σέβεται το περιβάλλον. Πιστεύουμε ότι ένας σύγχρονος σταθμός καυσίμων μπορεί να είναι μέρος μιας πιο πράσινης Κρήτης.",
+    section2_h: "Περιβάλλον & Νέα Καύσιμα",
+    section2_p: "Τα τελευταία χρόνια προσθέσαμε ηλιακά πάνελ, φυσικό αέριο CNG και υγραέριο Coral Gas. Δεν ακολουθούμε τάσεις — απλώς κάνουμε ό,τι έχει νόημα για την περιοχή μας.",
     section3_h: "Γιατί να μας Επιλέξετε",
     values: [
-      { icon: "🤝", title: "Οικογενειακή Φιλοξενία", desc: "Κάθε πελάτης αντιμετωπίζεται σαν μέλος της οικογένειάς μας." },
-      { icon: "⭐", title: "Ποιότητα AVIN", desc: "Καύσιμα πιστοποιημένης ποιότητας από τη συνεργασία μας με την AVIN." },
-      { icon: "☀️", title: "Σεβασμός στο Περιβάλλον", desc: "Ηλιακά πάνελ, CNG και LPG για μια πιο καθαρή κίνηση." },
-      { icon: "🚚", title: "Διανομή Καυσίμων", desc: "Φέρνουμε τα καύσιμα εκεί που τα χρειάζεστε, στην ώρα τους." },
-      { icon: "📍", title: "Κεντρική Τοποθεσία", desc: "15ο χλμ. Ηρακλείου–Μοιρών, στην καρδιά της Κρήτης." },
-      { icon: "🕕", title: "Καθημερινή Εξυπηρέτηση", desc: "Ανοιχτά 7 μέρες την εβδομάδα, 06:00–20:30." },
+      { icon: "01", title: "Οικογενειακό Πρατήριο", desc: "Τρεις γενιές στο ίδιο σημείο. Ξέρουμε τους πελάτες μας με το όνομα." },
+      { icon: "02", title: "Καύσιμα AVIN", desc: "Πιστοποιημένη ποιότητα. Bureau Veritas certification." },
+      { icon: "03", title: "Ηλιακά & CNG", desc: "Ηλιακά πάνελ, CNG και LPG — καθαρότερες επιλογές κίνησης." },
+      { icon: "04", title: "Διανομή Καυσίμων", desc: "Φέρνουμε καύσιμα εκεί που χρειάζεστε. Τηλεφωνήστε μας." },
+      { icon: "05", title: "15ο χλμ. Ηρακλείου–Μοιρών", desc: "Εθνική οδός, εύκολη πρόσβαση, άφθονος χώρος στάθμευσης." },
+      { icon: "06", title: "Ανοιχτά Καθημερινά", desc: "Δευτέρα έως Κυριακή, 06:00–20:30." },
     ],
   },
   en: {
     hero_tag: "Our Story",
     hero_h1: "Three Generations,\nOne Family",
-    hero_sub: "At Zarifaki Sons, we're more than just a stop along the way — we're part of your journey.",
+    hero_sub: "From grandfather to father, father to son — same spot, same approach.",
     section1_h: "Our Story",
     section1_p: [
-      "Proudly serving our community for three generations, we've built a legacy of quality, hospitality, and innovation. From our early days to today, love for people and dedication to service remain at the core of everything we do.",
-      "Located at the 15th km of the Heraklion–Moires national road, one of the most central points in Crete. Every day, thousands of travellers and locals choose to stop here — and we always welcome them with a smile.",
+      "Zarifaki Sons has been running at the same spot on the Heraklion-Moires road for three generations. A family business from day one — same people, same mindset.",
+      "We're at the 15th km, a central point for the Heraklion region. Hundreds of drivers stop here every day — locals and travellers alike.",
     ],
-    section2_h: "Our Commitment to the Environment",
-    section2_p: "From our state-of-the-art solar panels to offering CNG natural gas and Coral Gas LPG, we are committed to providing service that respects the environment. We believe a modern fuel station can be part of a greener Crete.",
+    section2_h: "Environment & New Fuels",
+    section2_p: "In recent years we added solar panels, CNG natural gas, and Coral Gas LPG. We don't follow trends — we just do what makes sense for our area.",
     section3_h: "Why Choose Us",
     values: [
-      { icon: "🤝", title: "Family Hospitality", desc: "Every customer is treated like a member of our family." },
-      { icon: "⭐", title: "AVIN Quality", desc: "Certified quality fuels through our partnership with AVIN." },
-      { icon: "☀️", title: "Environmental Respect", desc: "Solar panels, CNG, and LPG for cleaner driving." },
-      { icon: "🚚", title: "Fuel Delivery", desc: "We bring fuel to wherever you need it, on time." },
-      { icon: "📍", title: "Central Location", desc: "15th km Heraklion–Moires, at the heart of Crete." },
-      { icon: "🕕", title: "Daily Service", desc: "Open 7 days a week, 6:00 AM – 8:30 PM." },
+      { icon: "01", title: "Family Station", desc: "Three generations in the same spot. We know our customers by name." },
+      { icon: "02", title: "AVIN Fuel", desc: "Certified quality. Bureau Veritas certification." },
+      { icon: "03", title: "Solar & CNG", desc: "Solar panels, CNG and LPG — cleaner options for daily driving." },
+      { icon: "04", title: "Fuel Delivery", desc: "We bring fuel where you need it. Give us a call." },
+      { icon: "05", title: "15th km Heraklion-Moires", desc: "Main road, easy access, plenty of parking." },
+      { icon: "06", title: "Open Every Day", desc: "Monday to Sunday, 06:00–20:30." },
     ],
   },
 };
@@ -135,7 +135,7 @@ export default function AboutPageClient() {
                 whileHover={{ y: -4 }}
                 style={{ background: "white", borderRadius: "20px", padding: "2rem", boxShadow: "0 4px 20px rgba(0,0,0,0.06)", borderTop: "3px solid var(--red)" }}
               >
-                <div style={{ fontSize: "2rem", marginBottom: "1rem" }}>{v.icon}</div>
+                <div style={{ fontFamily: "var(--font-head)", fontWeight: 900, fontSize: "1.5rem", color: "var(--red)", marginBottom: "1rem", letterSpacing: "-0.02em" }}>{v.icon}</div>
                 <h3 style={{ fontFamily: "var(--font-head)", fontWeight: 800, fontSize: "1rem", color: "var(--night)", marginBottom: "0.5rem" }}>{v.title}</h3>
                 <p style={{ fontFamily: "var(--font-body)", fontSize: "0.875rem", color: "var(--ink-soft)", lineHeight: 1.65 }}>{v.desc}</p>
               </motion.div>

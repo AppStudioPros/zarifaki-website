@@ -5,12 +5,12 @@ import { useLang } from "@/lib/LangContext";
 import { t } from "@/lib/i18n";
 
 const SERVICES = [
-  { icon: "⛽", key: "svc_fuel",  img: "/images/IMG_20241114_135502504-scaled.jpg" },
-  { icon: "🌿", key: "svc_cng",   img: "/images/IMG_20241114_135345589_HDR-scaled.jpg" },
-  { icon: "💨", key: "svc_lpg",   img: "/images/IMG_20241114_135452680_HDR-scaled.jpg" },
-  { icon: "🚿", key: "svc_wash",  img: "/images/IMG_20241114_140155783_HDR-scaled.jpg" },
-  { icon: "☕", key: "svc_snack", img: "/images/IMG_20241114_140948924_HDR-scaled.jpg" },
-  { icon: "🔧", key: "svc_acc",   img: "/images/IMG_20241114_140418239_HDR-scaled.jpg" },
+  { key: "svc_fuel",  img: "/images/IMG_20241114_135502504-scaled.jpg" },
+  { key: "svc_cng",   img: "/images/IMG_20241114_135345589_HDR-scaled.jpg" },
+  { key: "svc_lpg",   img: "/images/IMG_20241114_135452680_HDR-scaled.jpg" },
+  { key: "svc_wash",  img: "/images/IMG_20241114_140155783_HDR-scaled.jpg" },
+  { key: "svc_snack", img: "/images/IMG_20241114_140948924_HDR-scaled.jpg" },
+  { key: "svc_acc",   img: "/images/IMG_20241114_140418239_HDR-scaled.jpg" },
 ] as const;
 
 export default function Services() {
@@ -33,7 +33,7 @@ export default function Services() {
         </motion.div>
 
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "1.5rem" }}>
-          {SERVICES.map(({ icon, key, img }, i) => (
+          {SERVICES.map(({ key, img }, i) => (
             <motion.div
               key={key}
               initial={{ opacity: 0, y: 30 }}
@@ -47,9 +47,7 @@ export default function Services() {
               <div style={{ position: "relative", aspectRatio: "16/9", overflow: "hidden" }}>
                 <Image src={img} alt={t(key as Parameters<typeof t>[0], lang)} fill style={{ objectFit: "cover", transition: "transform 0.5s" }} />
                 <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(14,26,43,0.5) 0%, transparent 60%)" }} />
-                <div style={{ position: "absolute", top: "1rem", left: "1rem", background: "var(--red)", borderRadius: "12px", width: 44, height: 44, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.4rem" }}>
-                  {icon}
-                </div>
+
               </div>
               {/* Text */}
               <div style={{ padding: "1.25rem 1.5rem 1.5rem" }}>
