@@ -1,26 +1,84 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap');
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Brand */
+  --red:        #C41E25;
+  --red-dark:   #9B1219;
+  --red-light:  #fde8e9;
+  --blue:       #1B3A6B;
+  --blue-dark:  #0E2247;
+  --blue-light: #d0dcf0;
+  --gold:       #F5A623;
+  --gold-dark:  #d4891a;
+  --cream:      #F8F4EC;
+  --night:      #0E1A2B;
+  --night-mid:  #162338;
+  --night-light:#1E3050;
+
+  /* Text */
+  --ink:        #1a1a1a;
+  --ink-soft:   #4a4a4a;
+  --ink-muted:  #888888;
+  --white:      #FFFFFF;
+
+  /* Fonts */
+  --font-head:  'Montserrat', sans-serif;
+  --font-body:  'Inter', sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--night);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+body { overflow-x: hidden; }
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-head);
+  font-weight: 800;
+  line-height: 1.1;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Utility */
+.section-pad { padding: 5rem 1.5rem; }
+.container   { max-width: 1200px; margin: 0 auto; }
+.text-red     { color: var(--red); }
+.text-gold    { color: var(--gold); }
+.text-blue    { color: var(--blue); }
+.bg-night     { background: var(--night); }
+.bg-cream     { background: var(--cream); }
+
+/* Scrolling marquee */
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.marquee-track {
+  display: flex;
+  gap: 3rem;
+  white-space: nowrap;
+  animation: marquee 18s linear infinite;
+  will-change: transform;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-10px); }
+}
+.float { animation: float 4s ease-in-out infinite; }
+
+/* Cat tail wag */
+@keyframes tailWag {
+  0%, 100% { transform: rotate(-15deg); }
+  50%       { transform: rotate(15deg); }
+}
+@keyframes catBlink {
+  0%, 90%, 100% { transform: scaleY(1); }
+  95%            { transform: scaleY(0.1); }
 }
