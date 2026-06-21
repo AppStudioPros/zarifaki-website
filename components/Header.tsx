@@ -10,10 +10,11 @@ export default function Header() {
   const { lang, toggle } = useLang();
   const [open, setOpen] = useState(false);
 
+  const isHome = typeof window !== "undefined" && window.location.pathname === "/";
   const navLinks = [
-    { href: "#services", label: t("nav_services", lang) },
-    { href: "#about",    label: t("nav_about", lang) },
-    { href: "#contact",  label: t("nav_contact", lang) },
+    { href: "/services", label: t("nav_services", lang) },
+    { href: "/about",    label: t("nav_about", lang) },
+    { href: isHome ? "#contact" : "/#contact", label: t("nav_contact", lang) },
   ];
 
   return (

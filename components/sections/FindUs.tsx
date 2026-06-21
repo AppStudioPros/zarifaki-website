@@ -76,7 +76,7 @@ export default function FindUs() {
 
             {/* Directions CTA */}
             <a
-              href="https://maps.google.com/?q=15ο+χλμ+Ηρακλείου+Μοιρών+Κρήτη"
+              href="https://maps.app.goo.gl/d8v2Dpsu7TzfhzdP8"
               target="_blank"
               rel="noopener noreferrer"
               style={{ display: "inline-flex", alignItems: "center", gap: "0.6rem", background: "transparent", color: "var(--gold)", fontFamily: "var(--font-head)", fontWeight: 700, fontSize: "0.9rem", padding: "0.8rem 1.75rem", borderRadius: "999px", border: "2px solid var(--gold)", textDecoration: "none", width: "fit-content", transition: "background 0.2s, color 0.2s" }}
@@ -95,7 +95,7 @@ export default function FindUs() {
             style={{ borderRadius: "20px", overflow: "hidden", border: "1px solid rgba(255,255,255,0.08)", aspectRatio: "4/3" }}
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3309.5!2d24.96!3d35.1!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDA2JzAwLjAiTiAyNMKwNTcnNjAuMCJF!5e0!3m2!1sel!2sgr!4v1"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3141.2!2d25.0420754!3d35.2168636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x149af90924578cc5:0x2d1dbf8d2901c0fd!2sAVIN!5e0!3m2!1sel!2sgr!4v1"
               width="100%"
               height="100%"
               style={{ border: 0, display: "block" }}

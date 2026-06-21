@@ -48,16 +48,17 @@ export default function CatMascot() {
         </div>
       )}
 
-      {/* Cat emoji with animations */}
+      {/* Cat image */}
       <div style={{
-        fontSize: "2.5rem",
-        lineHeight: 1,
-        filter: "drop-shadow(0 4px 12px rgba(0,0,0,0.5))",
+        width: "80px",
+        height: "80px",
         animation: "float 4s ease-in-out infinite",
         transition: "transform 0.2s",
-        transform: hovered ? "scale(1.2)" : "scale(1)",
+        transform: hovered ? "scale(1.15)" : "scale(1)",
+        filter: "drop-shadow(0 6px 16px rgba(0,0,0,0.5))",
       }}>
-        🐱
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/images/cat-mascot.png" alt="Zarifaki Sons Mascot" style={{ width: "100%", height: "100%", objectFit: "contain" }} />
       </div>
     </div>
   );

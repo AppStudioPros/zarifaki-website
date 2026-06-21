@@ -71,7 +71,7 @@ export default function Hero() {
 
           {/* CTAs */}
           <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
-            <a href="#services" style={{ background: "var(--red)", color: "white", fontFamily: "var(--font-head)", fontWeight: 700, fontSize: "0.9rem", letterSpacing: "0.05em", padding: "0.875rem 2rem", borderRadius: "999px", textDecoration: "none", transition: "transform 0.2s, box-shadow 0.2s", boxShadow: "0 4px 20px rgba(196,30,37,0.4)", display: "inline-block" }}
+            <a href="/services" style={{ background: "var(--red)", color: "white", fontFamily: "var(--font-head)", fontWeight: 700, fontSize: "0.9rem", letterSpacing: "0.05em", padding: "0.875rem 2rem", borderRadius: "999px", textDecoration: "none", transition: "transform 0.2s, box-shadow 0.2s", boxShadow: "0 4px 20px rgba(196,30,37,0.4)", display: "inline-block" }}
               onMouseOver={(e) => { e.currentTarget.style.transform = "translateY(-2px)"; e.currentTarget.style.boxShadow = "0 8px 30px rgba(196,30,37,0.5)"; }}
               onMouseOut={(e)  => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "0 4px 20px rgba(196,30,37,0.4)"; }}
             >

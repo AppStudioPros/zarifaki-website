@@ -42,7 +42,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 "addressCountry": "GR"
               },
               "openingHours": "Mo-Su 06:00-20:30",
-              "hasMap": "https://maps.app.goo.gl/zarifaki",
+              "hasMap": "https://maps.app.goo.gl/d8v2Dpsu7TzfhzdP8",
               "description": "Πρατήριο υγρών καυσίμων AVIN, φυσικό αέριο CNG, υγραέριο Coral Gas, διανομή καυσίμων, πλυντήριο αυτοκινήτου, snack bar. Τρεις γενιές οικογενειακής εξυπηρέτησης στην Κρήτη.",
               "priceRange": "€",
               "amenityFeature": [
