@@ -61,7 +61,7 @@ export default function About() {
             >
               <div style={{ fontSize: "1.4rem", lineHeight: 1 }}>☀️</div>
               <div style={{ fontFamily: "var(--font-head)", fontWeight: 800, fontSize: "0.6rem", color: "var(--night)", letterSpacing: "0.08em", textTransform: "uppercase", marginTop: "0.2rem" }}>
-                {lang === "el" ? "SOLAR" : "SOLAR"}
+                {lang === "el" ? "ΗΛΙΑΚΑ" : "SOLAR"}
               </div>
             </motion.div>
           </motion.div>

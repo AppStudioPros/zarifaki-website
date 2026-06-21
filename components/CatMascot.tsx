@@ -1,8 +1,10 @@
 "use client";
 import { useState } from "react";
+import { useLang } from "@/lib/LangContext";
 
 export default function CatMascot() {
   const [hovered, setHovered] = useState(false);
+  const { lang } = useLang();
 
   return (
     <div
@@ -34,7 +36,7 @@ export default function CatMascot() {
           color: "var(--gold)",
           boxShadow: "0 4px 20px rgba(0,0,0,0.4)",
         }}>
-          Καλωσήρθατε! 🐾
+          {lang === "el" ? "Καλωσήρθατε!" : "Welcome!"}
           <div style={{
             position: "absolute",
             bottom: "-6px",

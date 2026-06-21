@@ -16,7 +16,7 @@ export const translations = {
 
   // Services marquee
   marquee_items: {
-    el: ["Βενζίνη AVIN", "Φυσικό Αέριο CNG", "Υγραέριο Coral Gas", "Διανομή Καυσίμων", "Πλυντήριο Αυτοκινήτου", "Snack Bar", "Φρέσκος Καφές", "Αξεσουάρ Αυτοκινήτου"],
+    el: ["Βενζίνη AVIN", "Φυσικό Αέριο CNG", "Υγραέριο Coral Gas", "Διανομή Καυσίμων", "Πλυντήριο Αυτοκινήτων", "Σνακ Μπαρ", "Φρέσκος Καφές", "Αξεσουάρ Αυτοκινήτου"],
     en: ["AVIN Fuel", "Natural Gas CNG", "Coral Gas LPG", "Fuel Delivery", "Car Wash", "Snack Bar", "Fresh Coffee", "Auto Accessories"],
   },
 
@@ -34,14 +34,14 @@ export const translations = {
   // Services
   services_h2: { el: "Τι Προσφέρουμε", en: "What We Offer" },
   svc_fuel:    { el: "Βενζίνη & Πετρέλαιο", en: "Fuel & Diesel" },
-  svc_fuel_d:  { el: "Αμόλυβδη 95, Diesel & πετρέλαιο θέρμανσης AVIN υψηλής ποιότητας.", en: "Unleaded 95, Diesel & heating oil — AVIN quality guaranteed." },
+  svc_fuel_d:  { el: "Αμόλυβδη 95, Diesel & πετρέλαιο θέρμανσης. Πιστοποίηση Bureau Veritas.", en: "Unleaded 95, Diesel & heating oil. Bureau Veritas certified." },
   svc_cng:     { el: "Φυσικό Αέριο CNG", en: "Natural Gas CNG" },
   svc_cng_d:   { el: "Το πιο οικονομικό καύσιμο για εναλλακτική κίνηση. Coral Gas & FISIKON.", en: "The most economical alternative fuel. Coral Gas & FISIKON." },
   svc_lpg:     { el: "Υγραέριο Auto Gas", en: "LPG Auto Gas" },
   svc_lpg_d:   { el: "Coral Gas υγραέριο για όχηματα — χαμηλό κόστος, χαμηλές εκπομπές.", en: "Coral Gas LPG for vehicles — low cost, low emissions." },
   svc_wash:    { el: "Πλυντήριο Αυτοκινήτου", en: "Car Wash" },
   svc_wash_d:  { el: "Χειροκίνητο πλύσιμο — σωστά, όχι βιαστικά.", en: "Hand wash — done right, not rushed." },
-  svc_snack:   { el: "Snack Bar & Καφές", en: "Snack Bar & Coffee" },
+  svc_snack:   { el: "Σνακ Μπαρ & Καφές", en: "Snack Bar & Coffee" },
   svc_snack_d: { el: "Φρέσκος καφές και κάτι να φας. Χαλαρώστε λίγο.", en: "Fresh coffee and a bite. Take a break." },
   svc_acc:     { el: "Αξεσουάρ & Λιπαντικά", en: "Accessories & Lubricants" },
   svc_acc_d:   { el: "Λιπαντικά, αξεσουάρ και αέρας ελαστικών.", en: "Lubricants, accessories, and tyre air." },
