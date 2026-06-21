@@ -16,7 +16,7 @@ export default function Hero() {
         alt="Zarifaki Sons Gas Station"
         fill
         priority
-        style={{ objectFit: "cover", objectPosition: "center 30%" }}
+        style={{ objectFit: "cover", objectPosition: "20% 30%" }}
       />
       {/* Overlay */}
       <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg, rgba(14,26,43,0.88) 0%, rgba(14,26,43,0.65) 60%, rgba(14,26,43,0.4) 100%)" }} />
@@ -86,17 +86,7 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        {/* Partner logos in hero */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1 }}
-          style={{ position: "absolute", bottom: "2rem", right: "1.5rem", display: "flex", gap: "1rem", alignItems: "center" }}
-          className="hidden md:flex"
-        >
-          <Image src="/images/logo-avin.png" alt="AVIN" width={60} height={40} style={{ objectFit: "contain", filter: "brightness(1.2)" }} />
-          <Image src="/images/logo-coral-gas.png" alt="Coral Gas" width={70} height={40} style={{ objectFit: "contain", filter: "brightness(1.2)" }} />
-        </motion.div>
+        {/* Partner logos moved to Partners section below */}
       </div>
     </section>
   );

@@ -6,17 +6,22 @@ const LangContext = createContext<{ lang: Lang; toggle: () => void }>({ lang: "e
 
 export function LangProvider({ children }: { children: React.ReactNode }) {
   const [lang, setLang] = useState<Lang>("el");
+
   useEffect(() => {
-    const saved = localStorage.getItem("lang") as Lang | null;
-    if (saved === "el" || saved === "en") setLang(saved);
+    // Only restore saved preference if user explicitly chose English
+    // Default is always Greek ("el") unless they toggled
+    const saved = localStorage.getItem("zarifaki_lang") as Lang | null;
+    if (saved === "en") setLang("en");
   }, []);
+
   function toggle() {
     setLang((l) => {
       const next = l === "el" ? "en" : "el";
-      localStorage.setItem("lang", next);
+      localStorage.setItem("zarifaki_lang", next);
       return next;
     });
   }
+
   return <LangContext.Provider value={{ lang, toggle }}>{children}</LangContext.Provider>;
 }
 
