@@ -9,7 +9,7 @@ export default function Hero() {
   const headline = t("hero_h1", lang).split("\n");
 
   return (
-    <section style={{ position: "relative", minHeight: "100vh", display: "flex", alignItems: "center", overflow: "hidden", paddingTop: "80px", background: "var(--night)" }}>
+    <section style={{ position: "relative", minHeight: "0", display: "flex", alignItems: "center", overflow: "hidden", paddingTop: "80px", background: "var(--night)" }}>
 
       {/* Abstract background — animated gradient orbs */}
       <div style={{ position: "absolute", inset: 0, overflow: "hidden", pointerEvents: "none" }}>
@@ -35,14 +35,14 @@ export default function Hero() {
         <div style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px)", backgroundSize: "60px 60px" }} />
       </div>
 
-      <div className="container" style={{ position: "relative", zIndex: 1, padding: "2rem 1.5rem", width: "100%", display: "grid", gridTemplateColumns: "1fr auto", gap: "2rem", alignItems: "center" }}>
+      <div className="container" style={{ position: "relative", zIndex: 1, padding: "0 1.5rem", width: "100%", display: "grid", gridTemplateColumns: "1fr auto", gap: "2rem", alignItems: "center" }}>
 
         {/* LEFT — text content */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          style={{ maxWidth: "600px" }}
+          style={{ maxWidth: "600px", padding: "3rem 0" }}
         >
           {/* Tag */}
           <motion.div
@@ -149,8 +149,8 @@ export default function Hero() {
           <Image
             src="/images/cat-mascot.png"
             alt="Zarifaki Sons Mascot"
-            width={300}
-            height={300}
+            width={240}
+            height={240}
             style={{ objectFit: "contain", filter: "drop-shadow(0 12px 30px rgba(0,0,0,0.5))" }}
             priority
           />
