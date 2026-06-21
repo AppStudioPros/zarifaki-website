@@ -16,7 +16,7 @@ export default function Hero() {
         alt="Zarifaki Sons Gas Station"
         fill
         priority
-        style={{ objectFit: "cover", objectPosition: "20% 30%" }}
+        style={{ objectFit: "cover", objectPosition: "70% 30%" }}
       />
       {/* Overlay */}
       <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg, rgba(14,26,43,0.88) 0%, rgba(14,26,43,0.65) 60%, rgba(14,26,43,0.4) 100%)" }} />
