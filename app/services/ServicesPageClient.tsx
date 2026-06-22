@@ -169,10 +169,10 @@ export default function ServicesPageClient() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              style={{ display: "grid", gridTemplateColumns: i % 2 === 0 ? "1fr 1fr" : "1fr 1fr", gap: "4rem", alignItems: "center", direction: i % 2 === 0 ? "ltr" : "rtl" }}
+              className="grid-2col"
+              style={{ direction: "ltr" }}
             >
-              {/* Photo */}
-              <div style={{ borderRadius: "24px", overflow: "hidden", aspectRatio: "4/3", position: "relative", direction: "ltr" }}>
+              <div style={{ borderRadius: "24px", overflow: "hidden", aspectRatio: "4/3", position: "relative", order: i % 2 === 0 ? 0 : 1 }}>
                 <Image src={svc.img} alt={svc.title} fill style={{ objectFit: "cover" }} />
                 <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(14,26,43,0.5) 0%, transparent 60%)" }} />
                 <div style={{ position: "absolute", top: "1.25rem", left: "1.25rem", background: "var(--red)", borderRadius: "8px", padding: "0.35rem 0.75rem" }}>
@@ -181,7 +181,7 @@ export default function ServicesPageClient() {
               </div>
 
               {/* Text */}
-              <div style={{ direction: "ltr" }}>
+              <div style={{ order: i % 2 === 0 ? 1 : 0 }}>
                 <h2 style={{ fontFamily: "var(--font-head)", fontWeight: 900, fontSize: "clamp(1.5rem, 3vw, 2.2rem)", color: "white", marginBottom: "1rem" }}>{svc.title}</h2>
                 <p style={{ fontFamily: "var(--font-body)", fontSize: "1rem", color: "rgba(255,255,255,0.7)", lineHeight: 1.8, marginBottom: "1.5rem" }}>{svc.desc}</p>
                 <ul style={{ display: "flex", flexDirection: "column", gap: "0.5rem", marginBottom: "1.5rem" }}>

@@ -80,7 +80,7 @@ export default function AboutPageClient() {
 
       {/* Story */}
       <section style={{ background: "var(--night)", paddingTop: "5rem", paddingBottom: "5rem" }}>
-        <div className="container" style={{ padding: "0 1.5rem", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "4rem", alignItems: "center" }}>
+        <div className="container grid-2col" style={{ padding: "0 1.5rem" }}>
           <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
             <h2 style={{ fontFamily: "var(--font-head)", fontWeight: 900, fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)", color: "white", marginBottom: "1.5rem" }}>
               {c.section1_h}
@@ -104,7 +104,7 @@ export default function AboutPageClient() {
 
       {/* Environment */}
       <section style={{ background: "var(--night-mid)", paddingTop: "5rem", paddingBottom: "5rem" }}>
-        <div className="container" style={{ padding: "0 1.5rem", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "4rem", alignItems: "center" }}>
+        <div className="container grid-2col" style={{ padding: "0 1.5rem" }}>
           <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} style={{ borderRadius: "20px", overflow: "hidden", aspectRatio: "4/3", position: "relative" }}>
             <Image src="/images/IMG_20241114_135910383_HDR-scaled.jpg" alt="Solar panels" fill style={{ objectFit: "cover" }} />
             <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(14,26,43,0.4), transparent)" }} />

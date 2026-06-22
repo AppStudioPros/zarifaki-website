@@ -35,7 +35,7 @@ export default function Hero() {
         <div style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px)", backgroundSize: "60px 60px" }} />
       </div>
 
-      <div className="container" style={{ position: "relative", zIndex: 1, padding: "0 1.5rem", width: "100%", display: "grid", gridTemplateColumns: "1fr auto", gap: "2rem", alignItems: "center" }}>
+      <div className="container hero-grid" style={{ position: "relative", zIndex: 1, padding: "0 1.5rem", width: "100%" }}>
 
         {/* LEFT — text content */}
         <motion.div

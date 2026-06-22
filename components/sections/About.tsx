@@ -31,7 +31,7 @@ export default function About() {
   return (
     <section id="about" style={{ background: "var(--night)", overflow: "hidden", paddingTop: "5rem", paddingBottom: "5rem" }}>
       <div className="container" style={{ padding: "0 1.5rem" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "4rem", alignItems: "center" }}>
+        <div className="grid-2col">
           {/* Photos collage */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}

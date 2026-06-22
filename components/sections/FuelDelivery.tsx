@@ -9,7 +9,7 @@ export default function FuelDelivery() {
 
   return (
     <section style={{ background: "var(--night-mid)", overflow: "hidden" }}>
-      <div className="container section-pad" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "4rem", alignItems: "center" }}>
+      <div className="container section-pad grid-2col">
         {/* Text */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}

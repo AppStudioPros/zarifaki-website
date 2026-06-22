@@ -53,6 +53,42 @@ h1, h2, h3, h4, h5 {
 .bg-night     { background: var(--night); }
 .bg-cream     { background: var(--cream); }
 
+/* ── Responsive grids ── */
+.grid-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+.grid-2col-start {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+.grid-footer {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 3rem;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .grid-2col    { grid-template-columns: 1fr; gap: 2rem; }
+  .grid-2col-start { grid-template-columns: 1fr; gap: 2rem; }
+  .grid-footer  { grid-template-columns: 1fr; gap: 2rem; }
+  .hero-grid    { grid-template-columns: 1fr; }
+  .section-pad  { padding: 3rem 1.25rem; }
+  .container    { padding-left: 1.25rem; padding-right: 1.25rem; }
+  /* Services page — always photo first on mobile regardless of order */
+  .grid-2col > [style*="order: 0"],
+  .grid-2col > [style*="order: 1"] { order: unset !important; }
+}
+
 /* Scrolling marquee */
 @keyframes marquee {
   0%   { transform: translateX(0); }

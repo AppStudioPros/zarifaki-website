@@ -21,7 +21,7 @@ export default function FindUs() {
           <div style={{ width: 60, height: 4, background: "var(--red)", borderRadius: 2, margin: "0 auto" }} />
         </motion.div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "3rem", alignItems: "start" }}>
+        <div className="grid-2col-start">
           {/* Info */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
