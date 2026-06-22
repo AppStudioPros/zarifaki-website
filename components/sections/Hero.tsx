@@ -9,7 +9,7 @@ export default function Hero() {
   const headline = t("hero_h1", lang).split("\n");
 
   return (
-    <section style={{ position: "relative", minHeight: "0", display: "flex", alignItems: "center", overflow: "hidden", paddingTop: "80px", background: "var(--night)" }}>
+    <section style={{ position: "relative", minHeight: "0", display: "flex", alignItems: "center", overflow: "hidden", paddingTop: "80px", paddingBottom: "2rem", background: "var(--night)" }}>
 
       {/* Abstract background — animated gradient orbs */}
       <div style={{ position: "absolute", inset: 0, overflow: "hidden", pointerEvents: "none" }}>
