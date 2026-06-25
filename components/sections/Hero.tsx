@@ -1,9 +1,11 @@
 "use client";
 import Image from "next/image";
 import { useRef, useState } from "react";
-import { motion, useScroll, useMotionValueEvent, LayoutGroup, AnimatePresence } from "framer-motion";
+import { motion, useScroll, useMotionValueEvent, LayoutGroup } from "framer-motion";
 import { useLang } from "@/lib/LangContext";
 import { t } from "@/lib/i18n";
+
+const CAT_TRANSITION = { type: "spring", stiffness: 55, damping: 18 };
 
 export default function Hero() {
   const { lang } = useLang();
@@ -14,17 +16,17 @@ export default function Hero() {
   const { scrollYProgress } = useScroll({ target: heroRef, offset: ["start start", "end start"] });
 
   useMotionValueEvent(scrollYProgress, "change", (v) => {
-    if (v > 0.6 && catMode === "hero")   setCatMode("corner");
+    if (v > 0.6 && catMode === "hero")    setCatMode("corner");
     if (v < 0.35 && catMode === "corner") setCatMode("hero");
   });
 
   return (
-    <LayoutGroup>
+    <LayoutGroup id="cat-group">
       <section
         ref={heroRef}
-        style={{ position: "relative", minHeight: "0", display: "flex", alignItems: "center", overflow: "visible", paddingTop: "80px", paddingBottom: "2rem", background: "var(--night)" }}
+        style={{ position: "relative", minHeight: "0", display: "flex", alignItems: "center", paddingTop: "80px", paddingBottom: "2rem", background: "var(--night)", overflow: "hidden" }}
       >
-        {/* Abstract background orbs */}
+        {/* Background orbs */}
         <div style={{ position: "absolute", inset: 0, overflow: "hidden", pointerEvents: "none" }}>
           <motion.div animate={{ scale: [1, 1.15, 1], opacity: [0.18, 0.28, 0.18] }} transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }} style={{ position: "absolute", top: "-10%", left: "-5%", width: "500px", height: "500px", borderRadius: "50%", background: "radial-gradient(circle, var(--red) 0%, transparent 70%)" }} />
           <motion.div animate={{ scale: [1, 1.2, 1], opacity: [0.12, 0.2, 0.12] }} transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 2 }} style={{ position: "absolute", bottom: "0%", left: "10%", width: "400px", height: "400px", borderRadius: "50%", background: "radial-gradient(circle, var(--blue) 0%, transparent 70%)" }} />
@@ -34,7 +36,7 @@ export default function Hero() {
 
         <div className="container hero-grid" style={{ position: "relative", zIndex: 1, padding: "0 1.5rem", width: "100%" }}>
 
-          {/* LEFT — text */}
+          {/* Text */}
           <motion.div initial={{ opacity: 0, x: -40 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} style={{ maxWidth: "600px", padding: "3rem 0" }}>
             <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "rgba(245,166,35,0.12)", border: "1px solid rgba(245,166,35,0.35)", borderRadius: "999px", padding: "0.35rem 1rem", marginBottom: "1.5rem" }}>
               <div style={{ width: 6, height: 6, borderRadius: "50%", background: "var(--gold)" }} />
@@ -58,55 +60,49 @@ export default function Hero() {
             </motion.div>
           </motion.div>
 
-          {/* RIGHT — hero cat (only when in hero mode) */}
-          <AnimatePresence>
-            {catMode === "hero" && (
+          {/* Hero cat — only rendered in hero mode */}
+          {catMode === "hero" && (
+            <motion.div
+              layoutId="zarifaki-cat"
+              layout
+              transition={CAT_TRANSITION}
+              initial={{ opacity: 0, scale: 0.85, x: 60 }}
+              animate={{ opacity: 1, scale: 1, x: 0 }}
+              className="hidden md:flex"
+              style={{ flexDirection: "column", alignItems: "center", flexShrink: 0 }}
+            >
+              {/* Speech bubble */}
               <motion.div
-                key="hero-cat"
-                layoutId="zarifaki-cat"
-                initial={{ opacity: 0, scale: 0.85, x: 60 }}
-                animate={{ opacity: 1, scale: 1, x: 0 }}
-                exit={{ opacity: 0 }}
-                transition={{ type: "spring", stiffness: 80, damping: 18 }}
-                style={{ display: "flex", flexDirection: "column", alignItems: "center", flexShrink: 0 }}
-                className="hidden md:flex"
+                initial={{ opacity: 0, y: 10, scale: 0.8 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{ delay: 1.1, type: "spring" }}
+                style={{ position: "relative", background: "var(--white)", borderRadius: "20px", padding: "0.75rem 1.5rem", marginBottom: "1rem", boxShadow: "0 8px 30px rgba(0,0,0,0.3)" }}
               >
-                {/* Speech bubble */}
-                <motion.div
-                  initial={{ opacity: 0, y: 10, scale: 0.8 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  transition={{ delay: 1.1, type: "spring" }}
-                  style={{ position: "relative", background: "var(--white)", borderRadius: "20px", padding: "0.75rem 1.5rem", marginBottom: "1rem", boxShadow: "0 8px 30px rgba(0,0,0,0.3)" }}
-                >
-                  <span style={{ fontFamily: "var(--font-head)", fontWeight: 800, fontSize: "1.2rem", color: "var(--night)", whiteSpace: "nowrap" }}>
-                    {lang === "el" ? "Καλωσήρθατε!" : "Welcome!"}
-                  </span>
-                  <div style={{ position: "absolute", bottom: "-10px", left: "50%", transform: "translateX(-50%)", width: 0, height: 0, borderLeft: "10px solid transparent", borderRight: "10px solid transparent", borderTop: "10px solid white" }} />
-                </motion.div>
-
-                <Image src="/images/cat-mascot.png" alt="Zarifaki Sons Mascot" width={240} height={240} style={{ objectFit: "contain", filter: "drop-shadow(0 12px 30px rgba(0,0,0,0.5))" }} priority />
+                <span style={{ fontFamily: "var(--font-head)", fontWeight: 800, fontSize: "1.2rem", color: "var(--night)", whiteSpace: "nowrap" }}>
+                  {lang === "el" ? "Καλωσήρθατε!" : "Welcome!"}
+                </span>
+                <div style={{ position: "absolute", bottom: "-10px", left: "50%", transform: "translateX(-50%)", width: 0, height: 0, borderLeft: "10px solid transparent", borderRight: "10px solid transparent", borderTop: "10px solid white" }} />
               </motion.div>
-            )}
-          </AnimatePresence>
+
+              <Image src="/images/cat-mascot.png" alt="Zarifaki Sons Mascot" width={240} height={240} style={{ objectFit: "contain", filter: "drop-shadow(0 12px 30px rgba(0,0,0,0.5))" }} priority />
+            </motion.div>
+          )}
 
         </div>
       </section>
 
-      {/* Corner cat — appears after scrolling past hero, stays fixed */}
-      <AnimatePresence>
-        {catMode === "corner" && (
-          <motion.div
-            key="corner-cat"
-            layoutId="zarifaki-cat"
-            initial={false}
-            transition={{ type: "spring", stiffness: 90, damping: 20 }}
-            style={{ position: "fixed", bottom: "1.25rem", right: "1.25rem", width: 90, height: 90, zIndex: 50, pointerEvents: "none" }}
-            className="hidden md:block"
-          >
-            <Image src="/images/cat-mascot.png" alt="Mascot" width={90} height={90} style={{ objectFit: "contain", filter: "drop-shadow(0 4px 12px rgba(0,0,0,0.6))", width: "100%", height: "100%" }} />
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {/* Corner cat — fixed bottom-right, only rendered in corner mode */}
+      {catMode === "corner" && (
+        <motion.div
+          layoutId="zarifaki-cat"
+          layout
+          transition={CAT_TRANSITION}
+          className="hidden md:block"
+          style={{ position: "fixed", bottom: "1.25rem", right: "1.25rem", width: 90, height: 90, zIndex: 50, pointerEvents: "none" }}
+        >
+          <Image src="/images/cat-mascot.png" alt="Mascot" width={90} height={90} style={{ objectFit: "contain", width: "100%", height: "100%", filter: "drop-shadow(0 4px 12px rgba(0,0,0,0.6))" }} />
+        </motion.div>
+      )}
     </LayoutGroup>
   );
 }
