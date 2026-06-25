@@ -5,7 +5,7 @@ import { motion, useScroll, useMotionValueEvent, LayoutGroup } from "framer-moti
 import { useLang } from "@/lib/LangContext";
 import { t } from "@/lib/i18n";
 
-const CAT_TRANSITION = { type: "spring", stiffness: 55, damping: 18 };
+const CAT_TRANSITION = { type: "spring" as const, stiffness: 55, damping: 18 };
 
 export default function Hero() {
   const { lang } = useLang();
