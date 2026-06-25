@@ -48,7 +48,7 @@ export default function FuelDelivery() {
         >
           <div style={{ position: "relative", borderRadius: "24px", overflow: "hidden", aspectRatio: "4/3" }}>
             <Image
-              src="/images/IMG_20241114_135345589_HDR-scaled.jpg"
+              src="/images/IMG_20241114_141015518_HDR-scaled.jpg"
               alt="AVIN Fuel Pump"
               fill
               style={{ objectFit: "cover" }}
