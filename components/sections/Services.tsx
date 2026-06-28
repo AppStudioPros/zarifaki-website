@@ -10,7 +10,7 @@ const SERVICES = [
   { key: "svc_lpg",   img: "/images/IMG_20241114_141015518_HDR-scaled.jpg" },
   { key: "svc_wash",  img: "/images/IMG_20241114_140155783_HDR-scaled.jpg" },
   { key: "svc_snack", img: "/images/IMG_20241114_140418239_HDR-scaled.jpg" },
-  { key: "svc_acc",   img: "/images/IMG_20241114_140948924_HDR-scaled.jpg" },
+  { key: "svc_acc",   img: "/images/svc-accessories.jpg" },
 ] as const;
 
 export default function Services() {
