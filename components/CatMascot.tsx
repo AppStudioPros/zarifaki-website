@@ -7,6 +7,10 @@ const messages: Record<string, { el: string; en: string }> = {
     el: "Φέρνουμε καύσιμα σπίτι σας! 🚚",
     en: "We deliver fuel to your door! 🚚",
   },
+  "services": {
+    el: "Έχουμε όλα όσα χρειάζεστε! ⛽🚗☕",
+    en: "We've got everything you need! ⛽🚗☕",
+  },
   default: {
     el: "Καλωσήρθατε!",
     en: "Welcome!",
@@ -19,7 +23,7 @@ export default function CatMascot() {
   const { lang } = useLang();
 
   useEffect(() => {
-    const sectionIds = ["fuel-delivery"];
+    const sectionIds = ["fuel-delivery", "services"];
     const observers: IntersectionObserver[] = [];
 
     sectionIds.forEach((id) => {
