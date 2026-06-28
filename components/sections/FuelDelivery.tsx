@@ -51,7 +51,7 @@ export default function FuelDelivery() {
               src="/images/IMG_20241114_135452680_HDR-scaled.jpg"
               alt="AVIN Fuel Pump"
               fill
-              style={{ objectFit: "cover", objectPosition: "center 60%" }}
+              style={{ objectFit: "cover", objectPosition: "center 20%" }}
             />
             <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(14,26,43,0.6) 0%, transparent 60%)" }} />
           </div>
