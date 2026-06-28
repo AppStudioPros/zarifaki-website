@@ -49,7 +49,7 @@ export default function About() {
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
               style={{ position: "absolute", bottom: "-2rem", right: "-2rem", width: "45%", aspectRatio: "1", borderRadius: "16px", overflow: "hidden", border: "4px solid var(--night)", boxShadow: "0 8px 32px rgba(0,0,0,0.4)" }}
             >
-              <Image src="/images/IMG_20241114_135502504-scaled.jpg" alt="AVIN pump" fill style={{ objectFit: "cover" }} />
+              <Image src="/images/about-float.jpg" alt="Zarifaki Sons" fill style={{ objectFit: "cover" }} />
             </motion.div>
             {/* Solar panel badge */}
             <motion.div
