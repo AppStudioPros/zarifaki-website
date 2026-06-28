@@ -1,10 +1,45 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useLang } from "@/lib/LangContext";
+
+const messages: Record<string, { el: string; en: string }> = {
+  "fuel-delivery": {
+    el: "Φέρνουμε καύσιμα σπίτι σας! 🚚",
+    en: "We deliver fuel to your door! 🚚",
+  },
+  default: {
+    el: "Καλωσήρθατε!",
+    en: "Welcome!",
+  },
+};
 
 export default function CatMascot() {
   const [hovered, setHovered] = useState(false);
+  const [activeSection, setActiveSection] = useState("default");
   const { lang } = useLang();
+
+  useEffect(() => {
+    const sectionIds = ["fuel-delivery"];
+    const observers: IntersectionObserver[] = [];
+
+    sectionIds.forEach((id) => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) setActiveSection(id);
+          else setActiveSection((prev) => (prev === id ? "default" : prev));
+        },
+        { threshold: 0.4 }
+      );
+      observer.observe(el);
+      observers.push(observer);
+    });
+
+    return () => observers.forEach((o) => o.disconnect());
+  }, []);
+
+  const msg = messages[activeSection] ?? messages.default;
 
   return (
     <div
@@ -19,8 +54,8 @@ export default function CatMascot() {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      {/* Speech bubble */}
-      {hovered && (
+      {/* Speech bubble — shows on hover OR when a section-specific message is active */}
+      {(hovered || activeSection !== "default") && (
         <div style={{
           position: "absolute",
           bottom: "calc(100% + 12px)",
@@ -36,7 +71,7 @@ export default function CatMascot() {
           color: "var(--gold)",
           boxShadow: "0 4px 20px rgba(0,0,0,0.4)",
         }}>
-          {lang === "el" ? "Καλωσήρθατε!" : "Welcome!"}
+          {lang === "el" ? msg.el : msg.en}
           <div style={{
             position: "absolute",
             bottom: "-6px",

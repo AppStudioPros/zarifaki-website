@@ -8,7 +8,7 @@ export default function FuelDelivery() {
   const { lang } = useLang();
 
   return (
-    <section style={{ background: "var(--night-mid)", overflow: "hidden" }}>
+    <section id="fuel-delivery" style={{ background: "var(--night-mid)", overflow: "hidden" }}>
       <div className="container section-pad grid-2col">
         {/* Text */}
         <motion.div
