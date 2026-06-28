@@ -41,7 +41,7 @@ export default function About() {
             style={{ position: "relative" }}
           >
             <div style={{ borderRadius: "24px", overflow: "hidden", aspectRatio: "4/3", position: "relative" }}>
-              <Image src="/images/IMG_20241114_140948924_HDR-scaled.jpg" alt="Zarifaki Sons station" fill style={{ objectFit: "cover" }} />
+              <Image src="/images/about-main.jpg" alt="Zarifaki Sons station" fill style={{ objectFit: "cover" }} />
             </div>
             {/* Floating second photo */}
             <motion.div
