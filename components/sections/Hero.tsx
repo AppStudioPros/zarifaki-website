@@ -1,9 +1,14 @@
 "use client";
 import Image from "next/image";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useMotionValueEvent, LayoutGroup } from "framer-motion";
 import { useLang } from "@/lib/LangContext";
 import { t } from "@/lib/i18n";
+
+const sectionMessages: Record<string, { el: string; en: string }> = {
+  "fuel-delivery": { el: "Φέρνουμε καύσιμα σπίτι σας! 🚚", en: "We deliver fuel to your door! 🚚" },
+  "services":      { el: "Έχουμε όλα όσα χρειάζεστε! ⛽🚗☕", en: "We've got everything you need! ⛽🚗☕" },
+};
 
 const CAT_TRANSITION = { type: "spring" as const, stiffness: 55, damping: 18 };
 
@@ -13,12 +18,33 @@ export default function Hero() {
   const heroRef = useRef<HTMLElement>(null);
   const [catMode, setCatMode] = useState<"hero" | "corner">("hero");
 
+  const [activeSection, setActiveSection] = useState<string | null>(null);
+
   const { scrollYProgress } = useScroll({ target: heroRef, offset: ["start start", "end start"] });
 
   useMotionValueEvent(scrollYProgress, "change", (v) => {
     if (v > 0.6 && catMode === "hero")    setCatMode("corner");
     if (v < 0.35 && catMode === "corner") setCatMode("hero");
   });
+
+  useEffect(() => {
+    const ids = Object.keys(sectionMessages);
+    const observers: IntersectionObserver[] = [];
+    ids.forEach((id) => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const obs = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) setActiveSection(id);
+          else setActiveSection((prev) => prev === id ? null : prev);
+        },
+        { threshold: 0.35 }
+      );
+      obs.observe(el);
+      observers.push(obs);
+    });
+    return () => observers.forEach((o) => o.disconnect());
+  }, []);
 
   return (
     <LayoutGroup id="cat-group">
@@ -100,6 +126,34 @@ export default function Hero() {
           className="hidden md:block"
           style={{ position: "fixed", bottom: "1.25rem", right: "1.25rem", width: 90, height: 90, zIndex: 50, pointerEvents: "none" }}
         >
+          {/* Section speech bubble */}
+          {activeSection && sectionMessages[activeSection] && (
+            <motion.div
+              initial={{ opacity: 0, y: 8, scale: 0.85 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.85 }}
+              transition={{ type: "spring", stiffness: 200, damping: 20 }}
+              style={{
+                position: "absolute",
+                bottom: "calc(100% + 10px)",
+                right: 0,
+                background: "var(--night-mid, #1a2a3a)",
+                border: "1px solid var(--gold)",
+                borderRadius: "12px",
+                padding: "0.45rem 0.75rem",
+                whiteSpace: "nowrap",
+                fontFamily: "var(--font-head)",
+                fontSize: "0.72rem",
+                fontWeight: 700,
+                color: "var(--gold)",
+                boxShadow: "0 4px 20px rgba(0,0,0,0.4)",
+                pointerEvents: "none",
+              }}
+            >
+              {lang === "el" ? sectionMessages[activeSection].el : sectionMessages[activeSection].en}
+              <div style={{ position: "absolute", bottom: "-6px", right: "18px", width: 0, height: 0, borderLeft: "6px solid transparent", borderRight: "6px solid transparent", borderTop: "6px solid var(--gold)" }} />
+            </motion.div>
+          )}
           <Image src="/images/cat-mascot.png" alt="Mascot" width={90} height={90} style={{ objectFit: "contain", width: "100%", height: "100%", filter: "drop-shadow(0 4px 12px rgba(0,0,0,0.6))" }} />
         </motion.div>
       )}
